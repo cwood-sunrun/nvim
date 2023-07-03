@@ -4,5 +4,7 @@ require("christianwood.core.keymaps")
 require("christianwood.core.colorscheme")
 require("christianwood.plugins.lsp.mason")
 require("christianwood.plugins.nvim-tree")
-require("christianwood.plugins.telescope")
+require("christianwood.plugins.nvim-cmp")
+require("christianwood.plugins.lsp.lspconfig")
+require("christianwood.plugins.lsp.null-ls")
 

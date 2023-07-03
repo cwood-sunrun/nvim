@@ -20,6 +20,5 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 -- telescope
 -- this usee git root
-vim.keymap.set("n", "<leader>ff", ":Telescope git_files<cr>")
-vim.keymap.set("n", "<leader>fs", ":Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>fc", ":Telescope grep_string<cr>")
+vim.keymap.set("n", "<leader>p", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>f", "<cmd>lua require('fzf-lua').grep_project()<CR>", { silent = true })

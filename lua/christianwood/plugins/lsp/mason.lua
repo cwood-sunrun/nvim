@@ -1,4 +1,5 @@
 mason = require("mason")
+mason_null_ls = require("mason")
 mason_lspconfig = require("mason-lspconfig")
 
 mason.setup()
@@ -9,5 +10,12 @@ mason_lspconfig.setup({
     "tsserver",
     "cssls",
     "rust_analyzer",
+  }
+})
+
+mason_null_ls.setup({
+  ensure_installed = {
+    "eslint_d",
+    "prettier"
   }
 })

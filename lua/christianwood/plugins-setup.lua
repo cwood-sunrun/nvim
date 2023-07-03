@@ -39,13 +39,38 @@ return packer.startup(function(use)
   -- configure lsp servers
   use("neovim/nvim-lspconfig")
 
+  use("hrsh7th/nvim-cmp") -- completion plugin
+  use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
+  use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+  use({
+    "smjonas/inc-rename.nvim",
+    config = function()
+      require("inc_rename").setup()
+    end,
+  })
 
   -- file explorer
   use("nvim-tree/nvim-tree.lua")
 
-  -- fuzzy finder
+  use ({
+    'notjedi/nvim-rooter.lua',
+    config = function() require'nvim-rooter'.setup() end
+  })
+
+  -- lsp windows 
   use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
   use({"nvim-telescope/telescope.nvim", branch = "0.1.x"})
+  use({ "nvim-telescope/telescope-ui-select.nvim" }) -- for showing lsp code actions
+
+  -- Formatting linting
+  use("jose-elias-alvarez/null-ls.nvim")
+  use("jayp0521/mason-null-ls.nvim")
+
+  --
+  use { "ibhagwan/fzf-lua",
+    -- optional for icon support
+    requires = { "nvim-tree/nvim-web-devicons" }
+  }
 
   if packer_bootstrap then
     require("packer").sync()
