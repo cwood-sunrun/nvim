@@ -10,6 +10,7 @@ mason_lspconfig.setup({
     "tsserver",
     "cssls",
     "rust_analyzer",
+    "apex_ls"
   }
 })
 

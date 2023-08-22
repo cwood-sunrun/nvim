@@ -28,7 +28,13 @@ return packer.startup(function(use)
   use("wbthomason/packer.nvim")
   use("christoomey/vim-tmux-navigator")
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
-  use("slobodanzivanovic/velvet.nvim")
+
+  -- use('srcery-colors/srcery-vim')
+  use('folke/tokyonight.nvim')
+  -- use("slobodanzivanovic/velvet.nvim")
+  -- use("slobodanzivanovic/velvet.nvim")
+  -- use("pineapplegiant/spaceduck")
+
   use("tpope/vim-surround")
   use("vim-scripts/ReplaceWithRegister")
 
@@ -65,6 +71,9 @@ return packer.startup(function(use)
   -- Formatting linting
   use("jose-elias-alvarez/null-ls.nvim")
   use("jayp0521/mason-null-ls.nvim")
+
+  -- Zen mode
+  use("folke/zen-mode.nvim")
 
   --
   use { "ibhagwan/fzf-lua",

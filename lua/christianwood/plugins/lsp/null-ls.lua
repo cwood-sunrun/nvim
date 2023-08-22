@@ -11,7 +11,6 @@ null_ls.setup({
     formatting.rustfmt,
     diagnostics.eslint_d,
     diagnostics.proselint,
-    diagnostics.typos,
   },
       -- you can reuse a shared lspconfig on_attach callback here
     on_attach = function(client, bufnr)
