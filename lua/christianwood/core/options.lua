@@ -30,3 +30,23 @@ vim.opt.splitbelow = true
 
 -- Treat dashses as full word
 vim.opt.iskeyword:append("-")
+
+-- Float diagnostics
+vim.diagnostic.config({
+    virtual_text = false,
+    float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+    },
+    signs = true,
+    underline = true,
+    update_in_insert = true,
+    severity_sort = false,
+})
+
+-- Show diagnostic keymap
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
