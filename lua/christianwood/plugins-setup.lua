@@ -38,6 +38,9 @@ return packer.startup(function(use)
   use("tpope/vim-surround")
   use("vim-scripts/ReplaceWithRegister")
 
+  use "terrortylor/nvim-comment"
+  require('nvim_comment').setup()
+
   -- manage and install lsp service
   use("williamboman/mason.nvim")
   use("williamboman/mason-lspconfig.nvim")

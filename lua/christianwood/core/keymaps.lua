@@ -26,6 +26,10 @@ vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 -- this usee git root
 vim.keymap.set("n", "<leader>p", "<cmd>lua require('fzf-lua').files()<CR>", { silent = true })
 vim.keymap.set("n", "<leader>f", "<cmd>lua require('fzf-lua').grep_project()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>a", "<cmd>lua require('fzf-lua').lsp_code_actions()<CR>", { silent = true })
+vim.keymap.set("n", "<leader>]", "<cmd>lua vim.diagnostic.goto_next()<CR>>", { silent = true })
+vim.keymap.set("n", "<leader>[", "<cmd>lua vim.diagnostic.goto_prev()<CR>>", { silent = true })
+
 
 vim.keymap.set('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
 
