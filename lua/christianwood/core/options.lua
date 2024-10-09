@@ -50,3 +50,6 @@ vim.diagnostic.config({
 
 -- Show diagnostic keymap
 vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
+
+-- Disable swap files
+vim.opt.swapfile = false

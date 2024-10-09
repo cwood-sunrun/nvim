@@ -17,6 +17,5 @@ mason_lspconfig.setup({
 mason_null_ls.setup({
   ensure_installed = {
     "eslint_d",
-    "prettier"
   }
 })
