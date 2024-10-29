@@ -2,6 +2,10 @@
 vim.opt.relativenumber = true
 vim.opt.number = true
 
+-- English spellcheck
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+
 -- tabs and indentation
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
