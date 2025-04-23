@@ -31,6 +31,14 @@ return packer.startup(function(use)
 
   -- use('srcery-colors/srcery-vim')
   use('folke/tokyonight.nvim')
+  -- use('bettervim/yugen.nvim')
+  -- use('olivercederborg/poimandres.nvim')
+  -- config = function()
+  --   require('poimandres').setup {
+  --     -- leave this setup function empty for default config
+  --     -- or refer to the configuration section
+  --     -- for configuration options
+  --   }
   -- use("slobodanzivanovic/velvet.nvim")
   -- use("slobodanzivanovic/velvet.nvim")
   -- use("pineapplegiant/spaceduck")
@@ -89,3 +97,4 @@ return packer.startup(function(use)
   end
 end
 )
+
