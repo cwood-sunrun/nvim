@@ -7,5 +7,5 @@ require("christianwood.plugins.lsp.mason")
 require("christianwood.plugins.nvim-tree")
 require("christianwood.plugins.nvim-cmp")
 require("christianwood.plugins.lsp.lspconfig")
-require("christianwood.plugins.lsp.null-ls")
+-- require("christianwood.plugins.lsp.null-ls")
 
