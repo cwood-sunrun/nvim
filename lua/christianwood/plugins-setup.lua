@@ -29,19 +29,19 @@ return packer.startup(function(use)
   use("christoomey/vim-tmux-navigator")
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  -- use('srcery-colors/srcery-vim')
-  use('folke/tokyonight.nvim')
-  -- use('bettervim/yugen.nvim')
-  -- use('olivercederborg/poimandres.nvim')
-  -- config = function()
-  --   require('poimandres').setup {
-  --     -- leave this setup function empty for default config
-  --     -- or refer to the configuration section
-  --     -- for configuration options
-  --   }
-  -- use("slobodanzivanovic/velvet.nvim")
-  -- use("slobodanzivanovic/velvet.nvim")
-  -- use("pineapplegiant/spaceduck")
+  use({
+    "zenbones-theme/zenbones.nvim",
+    requires = { "rktjmp/lush.nvim" }
+  })
+  -- use('folke/tokyonight.nvim')
+  -- use({ 
+  -- 'olivercederborg/poimandres.nvim',
+  --   config = function()
+  --     require('poimandres').setup {
+  --       -- leave this setup function empty for default config
+  --     }
+  --   end
+  -- })
 
   use("tpope/vim-surround")
   use("vim-scripts/ReplaceWithRegister")
@@ -54,11 +54,12 @@ return packer.startup(function(use)
   use("williamboman/mason-lspconfig.nvim")
 
   -- configure lsp servers
-  use("neovim/nvim-lspconfig")
+  use( "neovim/nvim-lspconfig" )
 
   use("hrsh7th/nvim-cmp") -- completion plugin
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
   use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+
   use({
     "smjonas/inc-rename.nvim",
     config = function()
@@ -79,14 +80,9 @@ return packer.startup(function(use)
   use({"nvim-telescope/telescope.nvim", branch = "0.1.x"})
   use({ "nvim-telescope/telescope-ui-select.nvim" }) -- for showing lsp code actions
 
-  -- Formatting linting
-  use("jose-elias-alvarez/null-ls.nvim")
-  use("jayp0521/mason-null-ls.nvim")
-
   -- Zen mode
   use("folke/zen-mode.nvim")
 
-  --
   use { "ibhagwan/fzf-lua",
     -- optional for icon support
     requires = { "nvim-tree/nvim-web-devicons" }
