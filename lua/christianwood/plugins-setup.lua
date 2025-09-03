@@ -33,15 +33,6 @@ return packer.startup(function(use)
     "zenbones-theme/zenbones.nvim",
     requires = { "rktjmp/lush.nvim" }
   })
-  -- use('folke/tokyonight.nvim')
-  -- use({ 
-  -- 'olivercederborg/poimandres.nvim',
-  --   config = function()
-  --     require('poimandres').setup {
-  --       -- leave this setup function empty for default config
-  --     }
-  --   end
-  -- })
 
   use("tpope/vim-surround")
   use("vim-scripts/ReplaceWithRegister")
@@ -58,7 +49,15 @@ return packer.startup(function(use)
 
   use("hrsh7th/nvim-cmp") -- completion plugin
   use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-  use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
+
+  use({
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup()
+    end,
+  })
+
+  use("jose-elias-alvarez/typescript.nvim")
 
   use({
     "smjonas/inc-rename.nvim",
